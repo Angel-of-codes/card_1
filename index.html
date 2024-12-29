@@ -1,11 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card_1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .items {
+            --color: #fc1eed;
+            background-color: var(--color);
+            padding: 2rem 1rem;
+            min-width: 6rem;
+            box-shadow: #00000087 0px 1px 2px 0px,
+                #00000085 0px 1px 3px 1px;
+            position: relative;
+            border-radius: 10px;
+            transition: transform ease .3s;
+        }
+
+        .items::after {
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 1%;
+            z-index: 2;
+            height: 100%;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 3rem solid;
+            border-color: transparent transparent transparent var(--color);
+            filter: drop-shadow(5px 0px 4px #00000065);
+            transition: filter 1s;
+        }
+
+        .layer {
+            position: relative;
+            background: #fff;
+            border-radius: 15px;
+            padding: 1rem;
+            filter: drop-shadow(5px 3px 4px #00000065);
+            transition: transform ease .3s;
+
+        }
+
+        .items:hover .layer {
+            transform: translateX(10%);
+
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <section class="container">
+        <div class="row mt-3 g-5">
+            <div class="col-md-4">
+                <div class="items">
+                    <div class="layer">
+                        <h3 class="text-center">title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam ipsum voluptate
+                            doloribus. Iusto eum odit autem maiores sapiente saepe architecto, quibusdam reiciendis.</p>
+                        <h5 class="text-end">Step 1</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="items">
+                    <div class="layer">
+                        <h3 class="text-center">title 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam ipsum voluptate
+                            doloribus. Iusto eum odit autem maiores sapiente saepe architecto, quibusdam reiciendis.</p>
+                        <h5 class="text-end">Step 2</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="items">
+                    <div class="layer">
+                        <h3 class="text-center">title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam ipsum voluptate
+                            doloribus. Iusto eum odit autem maiores sapiente saepe architecto, quibusdam reiciendis.</p>
+                        <h5 class="text-end">Step 3</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
